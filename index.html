@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesona Domba Nusantara — Pusat Domba Bandung Barat</title>
+<meta name="description" content="CV Pesona Domba Nusantara: pusat domba di Bandung Barat. Domba Garut, Priangan, pedaging, dan bakalan; aqiqah, kurban, pembibitan, suplai daging, dan pengadaan partai besar. Domba Pilihan, Harga Bersahabat.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Kaushan+Script&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cokelat:#5A2A0C;     /* cokelat tua poster */
+    --cokelat-2:#7A3E14;
+    --emas:#F2B23A;        /* jingga keemasan */
+    --emas-muda:#F8E2B2;
+    --krem:#FBF3EC;
+    --krem-2:#F3E4D2;
+    --kayu:#C9864A;
+    --hijau:#3E7B2E;
+    --teks:#2E1A0E;
+    --abu:#6E5646;
+    --r:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Nunito",system-ui,sans-serif;color:var(--teks);background:var(--krem);line-height:1.7;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Merriweather",Georgia,serif;font-weight:900;line-height:1.15;color:var(--cokelat)}
+  .kuas{font-family:"Kaushan Script",cursive;font-weight:400}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+  .pil{display:inline-block;background:var(--emas);color:var(--cokelat);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:7px 16px;border-radius:999px}
+  .label{display:block;font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--kayu);margin-bottom:10px}
+  h2{font-size:clamp(32px,4.4vw,48px);margin-bottom:16px}
+  .lead{color:var(--abu);font-size:17.5px;max-width:620px}
+  .tengah{text-align:center}.tengah .lead{margin:0 auto}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:999px;background:var(--emas);color:var(--cokelat);transition:transform .2s,box-shadow .2s;box-shadow:0 6px 0 #B9791C}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #B9791C}
+  .btn.wa{background:#25D366;color:#fff;box-shadow:0 6px 0 #179046}
+  .btn.wa:hover{box-shadow:0 8px 0 #179046}
+  .btn.garis{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+  .btn.garis:hover{background:rgba(255,255,255,.12)}
+  .btn svg{width:20px;height:20px}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:40;background:rgba(251,243,236,.96);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(90,42,12,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo > span{display:flex;flex-direction:column;line-height:1}
+  .logo img{height:60px;width:auto}
+  .logo b{font-family:"Merriweather";font-weight:900;font-size:17px;color:var(--cokelat);line-height:1.2;letter-spacing:-.01em;display:block}
+  .logo small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.16em;color:var(--kayu);text-transform:uppercase;line-height:1;margin-top:5px}
+  .menu{display:flex;gap:24px;list-style:none;align-items:center}
+  .menu a{text-decoration:none;font-weight:700;font-size:15px}
+  .menu a:hover{color:var(--kayu)}
+  .menu .btn{padding:11px 20px;font-size:14px;box-shadow:0 4px 0 #179046}
+  .burger{display:none;background:none;border:0;cursor:pointer;color:var(--cokelat)}
+  .burger svg{width:30px;height:30px}
+
+  /* BANNER UTAMA */
+  .banner{position:relative;min-height:640px;display:flex;align-items:center;padding:90px 0;color:#fff;overflow:hidden}
+  .banner > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+  .banner::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(46,20,4,.92) 0%,rgba(46,20,4,.75) 42%,rgba(46,20,4,.15) 80%)}
+  .banner .wrap{position:relative;z-index:2;width:100%}
+  .banner-isi{max-width:600px}
+  .banner h1{color:#fff;font-size:clamp(42px,6.4vw,76px);margin:18px 0 6px;letter-spacing:-.01em}
+  .banner .lokasi{display:inline-flex;align-items:center;gap:10px;background:var(--cokelat);color:var(--emas-muda);font-size:clamp(26px,3.4vw,40px);padding:4px 22px 8px 16px;border-radius:8px;transform:rotate(-2deg)}
+  .banner .lokasi svg{width:30px;height:30px;color:var(--emas)}
+  .banner .tagline{font-family:"Merriweather";font-weight:700;font-style:italic;font-size:22px;color:var(--emas-muda);margin:26px 0 18px}
+  .cek{list-style:none;display:grid;gap:10px;margin-bottom:32px}
+  .cek li{display:flex;gap:12px;align-items:center;font-weight:700;font-size:17px}
+  .cek li span{flex:none;width:28px;height:28px;border-radius:50%;background:var(--hijau);display:grid;place-items:center;font-size:15px}
+  .banner .aksi{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* PITA JENIS */
+  .pita{background:var(--emas-muda);border-top:4px solid var(--emas);border-bottom:4px solid var(--emas)}
+  .pita .wrap{display:flex;align-items:center;justify-content:center;gap:12px 28px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+  .pita span{font-family:"Merriweather";font-weight:900;font-size:22px;color:var(--cokelat)}
+  .pita i{width:10px;height:10px;border-radius:50%;background:var(--cokelat)}
+
+  /* TENTANG */
+  .tentang-grid{display:block;max-width:920px;text-align:center}
+  .tentang-isi > p{max-width:720px;margin-left:auto;margin-right:auto}
+  .tentang-isi .karakter{justify-content:center}
+  .makna div{text-align:left}
+  .logo-panel{background:#fff;border-radius:28px;padding:50px 40px;text-align:center;box-shadow:0 20px 50px rgba(90,42,12,.1);position:relative}
+  .logo-panel img{width:min(300px,90%);margin:0 auto}
+  .logo-panel .tag{font-family:"Merriweather";font-style:italic;font-weight:700;color:var(--cokelat-2);margin-top:20px;font-size:19px}
+  .tentang-isi p{color:var(--abu);margin-bottom:14px}
+  .makna{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+  .makna div{background:#fff;border-radius:16px;padding:18px;border-top:5px solid var(--emas)}
+  .makna b{font-family:"Merriweather";font-size:18px;color:var(--cokelat);display:block}
+  .makna b{margin-bottom:6px;line-height:1.3}
+  .makna span{font-size:14.5px;color:var(--abu);line-height:1.55;display:block}
+  .karakter{display:flex;flex-wrap:wrap;gap:10px}
+  .karakter span{background:var(--cokelat);color:var(--emas-muda);font-weight:800;font-size:14px;padding:8px 16px;border-radius:999px}
+
+  /* JENIS DOMBA */
+  .jenis{background:#fff}
+  .jenis-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+  .kartu{background:var(--krem);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+  .kartu:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(90,42,12,.14)}
+  .kartu .foto{aspect-ratio:4/3;overflow:hidden}
+  .kartu .foto img{width:100%;height:100%;object-fit:cover}
+  .kartu .isi{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .kartu h3{font-size:22px;margin-bottom:6px}
+  .kartu p{color:var(--abu);font-size:15px;flex:1}
+  .kartu a{margin-top:16px;font-weight:800;color:var(--cokelat-2);text-decoration:none;font-size:15px}
+  .kartu a:hover{color:var(--kayu)}
+  .catatan-stok{margin-top:30px;text-align:center;color:var(--abu);font-size:15px}
+
+  /* LAYANAN */
+  .layanan{background:var(--cokelat);color:var(--emas-muda);position:relative;overflow:hidden}
+  .layanan h2{color:#fff}
+  .layanan .lead{color:#E7CDB0}
+  .layanan .label{color:var(--emas)}
+  .lay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+  .lay{background:rgba(255,255,255,.06);border:1px solid rgba(248,226,178,.2);border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;transition:background .25s,transform .25s}
+  .lay:hover{background:rgba(255,255,255,.11);transform:translateY(-4px)}
+  .lay p{flex:1}
+  .lay-link{margin-top:16px;font-weight:800;color:var(--emas);text-decoration:none;font-size:15px}
+  .instansi{margin-top:34px;background:var(--emas);color:var(--cokelat);border-radius:var(--r);padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .instansi b{display:block;font-family:"Merriweather";font-size:21px}
+  .instansi span{font-size:15px}
+  .instansi .btn{background:var(--cokelat);color:var(--emas-muda);box-shadow:0 6px 0 #2E1404}
+  .catatan-kirim{margin-top:16px;font-size:13px;color:#C9A98A}
+  .lay .ik{width:64px;height:64px;border-radius:50%;background:var(--emas);color:var(--cokelat);display:grid;place-items:center;margin-bottom:20px}
+  .lay .ik svg{width:36px;height:36px}
+  .lay h3{color:#fff;font-size:20px;margin-bottom:8px}
+  .lay p{color:#E7CDB0;font-size:15.5px}
+  .lay small{display:block;margin-top:10px;font-size:13px;color:#C9A98A}
+
+
+  /* PAKET PETERNAK PEMULA */
+  .paket{background:var(--krem-2)}
+  .paket-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:50px;align-items:stretch}
+  .pk{background:#fff;border-radius:24px;padding:30px 24px;display:flex;flex-direction:column;position:relative;border:2px solid transparent;transition:transform .25s,box-shadow .25s}
+  .pk:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(90,42,12,.14)}
+  .pk.unggul{border-color:var(--emas);background:#FFFCF6}
+  .pk .pita-pk{position:absolute;top:-14px;left:24px;background:var(--emas);color:var(--cokelat);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+  .pk .nama{font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--kayu)}
+  .pk .jumlah{font-family:"Merriweather";font-weight:900;font-size:54px;line-height:1;color:var(--cokelat);margin:10px 0 2px}
+  .pk .jumlah small{font-size:20px;font-weight:700}
+  .pk .komposisi{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+  .pk .komposisi span{background:var(--emas-muda);color:var(--cokelat);font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px}
+  .pk .cocok{font-size:14.5px;color:var(--abu);margin-bottom:14px}
+  .pk ul{list-style:none;display:grid;gap:8px;flex:1;align-content:start;margin-bottom:22px}
+  .pk li{font-size:14.5px;padding-left:26px;position:relative}
+  .pk li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--hijau);color:#fff;font-size:11px;display:grid;place-items:center;margin-top:3px}
+  .pk .harga{font-weight:800;color:var(--cokelat-2);margin-bottom:14px;font-size:15px}
+  .pk .btn{justify-content:center;font-size:15px;padding:13px 18px}
+  .pk.custom{background:var(--cokelat);color:var(--emas-muda)}
+  .pk.custom .nama{color:var(--emas)}.pk.custom .jumlah{color:#fff}.pk.custom .cocok{color:#E7CDB0}.pk.custom .harga{color:var(--emas)}
+  .pk.custom .komposisi span{background:rgba(248,226,178,.15);color:var(--emas-muda)}
+  .paket-info{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .paket-info div{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.6);border-radius:18px;padding:18px 20px}
+  .paket-info b{display:block;font-family:"Merriweather";color:var(--cokelat)}
+  .paket-info span{font-size:14.5px;color:var(--abu)}
+  .paket-info .no{flex:none;width:34px;height:34px;border-radius:50%;background:var(--cokelat);color:var(--emas);font-weight:800;display:grid;place-items:center}
+  .paket-catatan{margin-top:24px;text-align:center;font-size:13.5px;color:var(--abu)}
+
+
+  /* PAKET KURBAN MASJID */
+  .qurban{background:var(--cokelat);color:var(--emas-muda);position:relative;overflow:hidden}
+  .qurban::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(242,178,58,.18),transparent 45%),radial-gradient(circle at 10% 90%,rgba(242,178,58,.12),transparent 40%);pointer-events:none}
+  .qurban .wrap{position:relative}
+  .qurban h2{color:#fff}
+  .qurban .label{color:var(--emas)}
+  .qurban .lead{color:#E7CDB0}
+  .qurban .pk{background:#FFFCF6;color:var(--teks)}
+  .qurban .pk.unggul{border-color:var(--emas);box-shadow:0 0 0 4px rgba(242,178,58,.25)}
+  .qurban .pk.custom{background:#3E1C07;border:2px solid rgba(248,226,178,.25);color:var(--emas-muda)}
+  .qurban .pk.custom .btn{background:var(--emas);color:var(--cokelat)}
+  .dkm{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+  .dkm div{background:rgba(255,255,255,.07);border:1px solid rgba(248,226,178,.18);border-radius:18px;padding:20px}
+  .dkm b{display:block;font-family:"Merriweather";color:#fff;font-size:16px;margin:8px 0 4px;line-height:1.3}
+  .dkm span{font-size:14px;color:#E7CDB0;line-height:1.55;display:block}
+  .dkm .ik-q{font-size:24px;line-height:1}
+  .syarat{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;font-size:14px;color:#E7CDB0}
+  .syarat b{color:var(--emas)}
+  .qurban .paket-catatan{color:#CDAE8E}
+
+  /* CARA ORDER */
+  .langkah{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px;counter-reset:l}
+  .lk{background:#fff;border-radius:var(--r);padding:30px 24px;position:relative}
+  .lk::before{counter-increment:l;content:counter(l);position:absolute;top:-18px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--emas);color:var(--cokelat);font-family:"Merriweather";font-weight:900;font-size:20px;display:grid;place-items:center;box-shadow:0 4px 0 #B9791C}
+  .lk h3{font-size:20px;margin:12px 0 6px}
+  .lk p{color:var(--abu);font-size:15px}
+
+  /* GALERI */
+  .galeri{background:#fff;padding-bottom:0}
+  .gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:8px;margin-top:46px}
+  .gal figure{position:relative;overflow:hidden;background:var(--krem-2)}
+  .gal figure:first-child{grid-row:span 2}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .gal figure:hover img{transform:scale(1.05)}
+  .gal figcaption{position:absolute;left:14px;bottom:14px;background:rgba(46,20,4,.8);color:#fff;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px}
+
+  /* KONTAK */
+  .kontak-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch;margin-top:46px}
+  .info{background:#fff;border-radius:24px;padding:34px 32px;box-shadow:0 14px 40px rgba(90,42,12,.08)}
+  .info-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px dashed var(--krem-2)}
+  .info-item:last-of-type{border-bottom:0}
+  .info-item .ik{flex:none;width:46px;height:46px;border-radius:50%;background:var(--emas-muda);color:var(--cokelat);display:grid;place-items:center}
+  .info-item .ik svg{width:22px;height:22px}
+  .info-item b{display:block;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--kayu)}
+  .info-item address,.info-item a,.info-item span{font-style:normal;font-weight:700;text-decoration:none;color:var(--teks)}
+  .info-item a:hover{color:var(--kayu)}
+  .sosmed{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .sosmed a{display:inline-flex;align-items:center;gap:8px;background:var(--krem);border-radius:999px;padding:7px 14px;font-size:14px}
+  .sosmed svg{width:18px;height:18px}
+  .info .aksi{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .kontak-grid > *{min-width:0}
+  .sosmed a{overflow-wrap:anywhere}
+  .peta{border-radius:24px;overflow:hidden;min-height:440px;background:var(--krem-2);position:relative;box-shadow:0 14px 40px rgba(90,42,12,.08)}
+  .peta iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;background:transparent}
+  .peta-cadangan{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:30px;text-decoration:none;color:var(--cokelat);
+    background:linear-gradient(rgba(242,226,205,.85),rgba(242,226,205,.85)),repeating-linear-gradient(0deg,transparent 0 46px,rgba(90,42,12,.08) 46px 48px),repeating-linear-gradient(90deg,transparent 0 46px,rgba(90,42,12,.08) 46px 48px)}
+  .peta-cadangan .pin-besar{width:72px;height:72px;border-radius:50%;background:var(--cokelat);color:var(--emas);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(90,42,12,.12)}
+  .peta-cadangan .pin-besar svg{width:32px;height:32px}
+  .peta-cadangan b{font-family:"Merriweather";font-size:20px;margin-top:10px}
+  .peta-cadangan > span:not(.btn):not(.pin-besar){color:var(--abu);max-width:340px;font-size:15px}
+  .peta-cadangan .btn{margin-top:8px}
+
+  footer{background:#2E1404;color:#D9BFA3;padding:60px 0 30px;margin-top:96px}
+  .kaki{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+  .kaki .badge{display:inline-block;background:var(--krem);border-radius:24px;padding:10px 14px}
+  .kaki .badge img{height:90px;width:auto}
+  .kaki p{margin-top:14px;font-size:14.5px;max-width:340px}
+  .kaki h4{font-family:"Merriweather";color:#fff;font-size:17px;margin-bottom:14px}
+  .kaki ul{list-style:none;display:grid;gap:8px;font-size:14.5px}
+  .kaki a{text-decoration:none}
+  .kaki a:hover{color:var(--emas)}
+  .bawah{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#A88B70}
+
+  /* WA mengambang */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+  .wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:denyut 2.2s ease-out infinite;z-index:-1}
+  .wa-float svg{width:34px;height:34px}
+  @keyframes denyut{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+
+  .muncul{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .muncul.tampil{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.muncul{opacity:1;transform:none}.wa-float::before{animation:none}}
+
+  @media (max-width:1000px){
+    .menu{display:none}
+    .menu.buka{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;gap:0;background:var(--krem);padding:8px 0 20px;box-shadow:0 12px 20px rgba(90,42,12,.1)}
+    .menu.buka a{display:block;padding:12px 24px}
+    .menu.buka .btn{margin:8px 24px 0;display:inline-flex}
+    .burger{display:block}
+    .banner::before{background:linear-gradient(180deg,rgba(46,20,4,.55) 0%,rgba(46,20,4,.9) 70%)}
+    .tentang-grid,.kontak-grid{grid-template-columns:1fr;gap:44px}
+    .jenis-grid{grid-template-columns:1fr 1fr}
+    .lay-grid{grid-template-columns:1fr 1fr}
+    .langkah{grid-template-columns:1fr 1fr;row-gap:40px}
+    .paket-grid{grid-template-columns:1fr 1fr;row-gap:34px}
+    .paket-info{grid-template-columns:1fr}
+    .dkm{grid-template-columns:1fr 1fr}
+    .gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .gal figure{aspect-ratio:4/3}
+    .gal figure:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+    .kaki{grid-template-columns:1fr 1fr}
+    .kaki > div:first-child{grid-column:span 2}
+  }
+  @media (max-width:560px){
+    section{padding:72px 0}
+    .logo b{font-size:15px}
+    .logo img{height:50px}
+    .banner{min-height:0;padding:70px 0}
+    .banner .aksi .btn{width:100%;justify-content:center}
+    .makna{grid-template-columns:1fr}
+    .dkm{grid-template-columns:1fr}
+    .lay-grid{grid-template-columns:1fr}
+    .jenis-grid,.langkah,.paket-grid{grid-template-columns:1fr}
+    .info{padding:26px 22px}
+    .peta{min-height:340px}
+    .kaki{grid-template-columns:1fr}
+    .kaki > div:first-child{grid-column:auto}
+    .wa-float{right:16px;bottom:16px;width:56px;height:56px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5 10 10 5.2 16 5.2S27 10 27 15.8s-5 10.6-11 10.6zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="tt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.4 4.6 5 5"/></g></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v6h4v-6H16l.6-4h-3.1V8.9c0-.6.3-.9.5-.9z"/></symbol>
+  <symbol id="yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12a31 31 0 0 0 .4 3.8 3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></symbol>
+</svg>
+
+<header>
+  <nav class="wrap nav">
+    <a href="#beranda" class="logo"><img src="img/logo.png" alt="Logo Pesona Domba Nusantara"><span><b>Pesona Domba<br>Nusantara</b><small>Bandung Barat</small></span></a>
+    <button class="burger" aria-label="Buka menu" onclick="document.getElementById('menu').classList.toggle('buka')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="menu" id="menu">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#jenis">Jenis Domba</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#paket">Paket</a></li>
+      <li><a href="#order">Cara Order</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a href="#" class="btn wa link-wa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 1. BANNER UTAMA -->
+<section class="banner" id="beranda">
+  <img src="img/kandang.jpg" alt="Kandang kayu Pesona Domba Nusantara berisi domba Garut bertanduk besar">
+  <div class="wrap">
+    <div class="banner-isi muncul">
+      <span class="pil">CV Pesona Domba Nusantara</span>
+      <h1>Pusat Domba</h1>
+      <span class="lokasi kuas"><svg><use href="#pin"/></svg>Bandung Barat</span>
+      <p class="tagline">“Domba Pilihan, Harga Bersahabat.”</p>
+      <ul class="cek">
+        <li><span>✓</span>Grosir domba dengan harga bersahabat</li>
+        <li><span>✓</span>Pengadaan partai besar untuk instansi &amp; program pemerintah</li>
+        <li><span>✓</span>Aqiqah, kurban, pembibitan &amp; suplai daging rutin</li>
+        <li><span>✓</span>Pengiriman Bandung Raya, Jabodetabek &amp; luar Jawa*</li>
+      </ul>
+      <div class="aksi">
+        <a href="#" class="btn wa link-wa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Tanya stok via WhatsApp</a>
+        <a href="#jenis" class="btn garis">Lihat jenis domba</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pita"><div class="wrap">
+  <span>Domba Garut</span><i></i><span>Priangan</span><i></i><span>Pedaging</span><i></i><span>Bakalan</span>
+</div></div>
+
+<!-- 2. TENTANG -->
+<section id="tentang">
+  <div class="wrap tentang-grid">
+    <div class="tentang-isi muncul">
+      <span class="label">Tentang kami</span>
+      <h2>Ternak lokal Bandung Barat, untuk pembeli di seluruh Nusantara</h2>
+      <p>Pesona Domba Nusantara (PDN) adalah usaha peternakan dan perdagangan domba yang berbasis di Parongpong, Bandung Barat. Kami melayani peternak, pedagang, reseller, hingga konsumen individu, dengan pembelian partai kecil maupun besar.</p>
+      <div class="makna">
+        <div><b>Pesona</b><span>Daya tarik ternak lokal pilihan.</span></div>
+        <div><b>Domba</b><span>Fokus utama kami: domba sehat dan terawat.</span></div>
+        <div><b>Nusantara</b><span>Jangkauan pembeli sampai luar Jawa.</span></div>
+      </div>
+      <div class="karakter"><span>Terpercaya</span><span>Ekonomis</span><span>Profesional</span><span>Lokal</span><span>Bersahabat</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRODUK: JENIS DOMBA -->
+<section class="jenis" id="jenis">
+  <div class="wrap">
+    <div class="tengah muncul">
+      <span class="label">Jenis domba</span>
+      <h2>Pilih domba sesuai kebutuhanmu</h2>
+      <p class="lead">Untuk konsumsi, usaha penggemukan, hingga stok pedagang. Tanyakan ketersediaan, bobot, dan harga terbaru lewat WhatsApp.</p>
+    </div>
+    <div class="jenis-grid">
+      <article class="kartu muncul"><div class="foto"><img src="img/jenis-garut.jpg" alt="Domba Garut jantan bertanduk melingkar" loading="lazy"></div>
+        <div class="isi"><h3>Domba Garut</h3><p>Domba lokal khas Jawa Barat dengan tanduk melingkar besar pada jantan. Postur gagah dan banyak dicari.</p><a href="#" class="link-wa" data-jenis="Domba Garut" target="_blank" rel="noopener">Tanya stok →</a></div></article>
+      <article class="kartu muncul"><div class="foto"><img src="img/jenis-priangan-asli.jpg" alt="Domba Priangan berbulu putih dengan tanduk melengkung di kandang Pesona Domba Nusantara" loading="lazy"></div>
+        <div class="isi"><h3>Domba Priangan</h3><p>Domba lokal Priangan yang adaptif dan mudah dipelihara, cocok untuk berbagai kebutuhan.</p><a href="#" class="link-wa" data-jenis="Domba Priangan" target="_blank" rel="noopener">Tanya stok →</a></div></article>
+      <article class="kartu muncul"><div class="foto"><img src="img/jenis-pedaging.jpg" alt="Domba pedaging di kandang" loading="lazy"></div>
+        <div class="isi"><h3>Domba Pedaging</h3><p>Domba siap potong untuk kebutuhan konsumsi, usaha kuliner, dan katering.</p><a href="#" class="link-wa" data-jenis="Domba Pedaging" target="_blank" rel="noopener">Tanya stok →</a></div></article>
+      <article class="kartu muncul"><div class="foto"><img src="img/jenis-bakalan-asli.jpg" alt="Domba bakalan muda di kandang kayu" loading="lazy"></div>
+        <div class="isi"><h3>Domba Bakalan</h3><p>Domba muda untuk digemukkan kembali oleh peternak dan reseller.</p><a href="#" class="link-wa" data-jenis="Domba Bakalan" target="_blank" rel="noopener">Tanya stok →</a></div></article>
+    </div>
+    <p class="catatan-stok muncul">Stok dan harga berubah setiap minggu. Minta foto atau video domba terbaru sebelum membeli.</p>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section class="layanan" id="layanan">
+  <div class="wrap">
+    <div class="muncul"><span class="label">Layanan</span><h2>Melayani dari satu ekor sampai satu truk</h2><p class="lead">Dari kebutuhan aqiqah keluarga sampai pengadaan instansi dan program pemerintah, dengan pelayanan teratur dan informasi transparan.</p></div>
+    <div class="lay-grid">
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21v-6h6v6M3 10l9-6 9 6"/></svg></div><h3>Pengadaan partai besar</h3><p>Pasokan domba dalam jumlah besar untuk kementerian, instansi, BUMN, dan perusahaan.</p><a href="#" class="lay-link link-wa" data-jenis="Pengadaan partai besar untuk instansi" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5l8-2 8 2v16"/><path d="M9 21v-5h6v5M8 9h2M14 9h2M8 13h2M14 13h2"/></svg></div><h3>Program pemerintah</h3><p>Mendukung program ketahanan pangan dan bantuan ternak bagi kelompok tani dan peternak.</p><a href="#" class="lay-link link-wa" data-jenis="pasokan domba untuk program pemerintah" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></div><h3>Pembibitan partai besar</h3><p>Indukan dan pejantan untuk usaha pembibitan, kelompok ternak, dan koperasi.</p><a href="#" class="lay-link link-wa" data-jenis="domba pembibitan (indukan/pejantan) partai besar" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4c3 0 5 2.5 5 5.5 0 4-4 7-8 9l-3 1.5a2 2 0 0 1-2.6-2.6L8 14c2-4 3-10 7-10z"/><circle cx="15" cy="9" r="1.5"/></svg></div><h3>Suplier daging rutin</h3><p>Pasokan domba potong dan daging secara rutin untuk rumah makan, katering, dan hotel.</p><a href="#" class="lay-link link-wa" data-jenis="suplai daging domba rutin" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><h3>Aqiqah</h3><p>Domba sehat dan cukup umur untuk aqiqah, dengan pilihan bobot sesuai kebutuhan.</p><a href="#" class="lay-link link-wa" data-jenis="domba untuk aqiqah" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/><path d="M17 4l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2z"/></svg></div><h3>Kurban</h3><p>Domba kurban sehat dan cukup umur, untuk perorangan maupun panitia masjid.</p><a href="#kurban" class="lay-link">Lihat paket masjid →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4 4 3 3-2 4 3"/><path d="M6 8l5 5a1.5 1.5 0 0 0 2-2l-2-2"/><path d="M14 14l2 2a1.5 1.5 0 0 0 2-2l-3-3"/><path d="M22 12l-4-4"/></svg></div><h3>Partai kecil & reseller</h3><p>Beli satuan untuk kebutuhan pribadi, atau kerja sama pasokan untuk pedagang dan reseller.</p><a href="#" class="lay-link link-wa" data-jenis="pembelian partai kecil / kerja sama reseller" target="_blank" rel="noopener">Konsultasi →</a></article>
+      <article class="lay muncul"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h13v10H1zM14 10h4l3 3v3h-7"/><circle cx="5" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div><h3>Pengiriman</h3><p>Bandung Raya, Jabodetabek, dan luar Jawa.*</p><a href="#" class="lay-link link-wa" data-jenis="pengiriman domba" target="_blank" rel="noopener">Konsultasi →</a></article>
+    </div>
+    <div class="instansi muncul">
+      <div><b>Butuh penawaran untuk instansi atau program?</b><span>Sampaikan jumlah, jenis domba, lokasi, dan jadwal. Penawaran harga kami siapkan sesuai kebutuhan.</span></div>
+      <a href="#" class="btn link-wa" data-pesan="Halo Pesona Domba Nusantara, kami dari instansi/perusahaan ingin meminta penawaran harga untuk pengadaan domba. Jumlah: ..., jenis: ..., lokasi: ..., jadwal: ..." target="_blank" rel="noopener">Minta penawaran</a>
+    </div>
+    <p class="catatan-kirim">*Pengiriman sesuai ketentuan penjual. Tanyakan ongkos dan jadwal kirim.</p>
+  </div>
+</section>
+
+<!-- PAKET PETERNAK PEMULA -->
+<section class="paket" id="paket">
+  <div class="wrap">
+    <div class="tengah muncul">
+      <span class="label">Paket peternak pemula</span>
+      <h2>Mulai beternak domba dengan paket siap jalan</h2>
+      <p class="lead">Tidak perlu bingung memilih satu per satu. Pilih paket sesuai skala usahamu, kami bantu siapkan indukan dan pejantannya.</p>
+    </div>
+    <div class="paket-grid">
+      <article class="pk muncul">
+        <span class="nama">Paket Pemula</span>
+        <div class="jumlah">10 <small>ekor</small></div>
+        <div class="komposisi"><span>9 betina</span><span>1 pejantan</span></div>
+        <p class="cocok">Untuk yang baru mulai beternak di lahan pekarangan.</p>
+        <ul><li>Domba sehat hasil seleksi</li><li>Indukan siap kawin dan pejantan pilihan</li><li>Konsultasi awal kandang &amp; pakan</li><li>Pengiriman ke lokasi*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya peternak pemula dan tertarik Paket Pemula 10 ekor (9 betina + 1 pejantan). Mohon info harga dan ketersediaannya." target="_blank" rel="noopener">Tanya paket ini</a>
+      </article>
+      <article class="pk muncul unggul"><span class="pita-pk">Paling diminati</span>
+        <span class="nama">Paket Tumbuh</span>
+        <div class="jumlah">20 <small>ekor</small></div>
+        <div class="komposisi"><span>18 betina</span><span>2 pejantan</span></div>
+        <p class="cocok">Untuk peternak yang ingin populasi berkembang lebih cepat.</p>
+        <ul><li>Domba sehat hasil seleksi</li><li>Indukan siap kawin dan pejantan pilihan</li><li>Konsultasi awal kandang &amp; pakan</li><li>Pengiriman ke lokasi*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya tertarik Paket Tumbuh 20 ekor (18 betina + 2 pejantan). Mohon info harga dan ketersediaannya." target="_blank" rel="noopener">Tanya paket ini</a>
+      </article>
+      <article class="pk muncul">
+        <span class="nama">Paket Usaha</span>
+        <div class="jumlah">50 <small>ekor</small></div>
+        <div class="komposisi"><span>45 betina</span><span>5 pejantan</span></div>
+        <p class="cocok">Untuk usaha ternak skala kecil, kelompok tani, atau koperasi.</p>
+        <ul><li>Domba sehat hasil seleksi</li><li>Indukan siap kawin dan pejantan pilihan</li><li>Konsultasi awal kandang &amp; pakan</li><li>Jadwal kirim bertahap bila perlu</li><li>Pengiriman ke lokasi*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya tertarik Paket Usaha 50 ekor (45 betina + 5 pejantan). Mohon info harga dan ketersediaannya." target="_blank" rel="noopener">Tanya paket ini</a>
+      </article>
+      <article class="pk muncul custom">
+        <span class="nama">Paket Custom</span>
+        <div class="jumlah">100+ <small>ekor</small></div>
+        <div class="komposisi"><span>Komposisi bebas</span></div>
+        <p class="cocok">Jumlah, jenis domba, dan rasio betina-pejantan disesuaikan dengan rencana usahamu.</p>
+        <ul><li>Bisa campur Garut &amp; Priangan</li><li>Untuk penggemukan atau pembibitan</li><li>Penawaran harga tertulis</li></ul>
+        <div class="harga">Harga: sesuai penawaran</div>
+        <a href="#" class="btn link-wa" data-pesan="Halo Pesona Domba Nusantara, saya ingin merancang paket domba custom. Jumlah: ..., jenis: ..., tujuan (pembibitan/penggemukan): ..., lokasi: ..." target="_blank" rel="noopener">Rancang paket</a>
+      </article>
+    </div>
+    <div class="paket-info">
+      <div class="muncul"><span class="no">1</span><span><b>Pilih paket</b>Sesuaikan dengan luas kandang dan modal awal.</span></div>
+      <div class="muncul"><span class="no">2</span><span><b>Cek domba</b>Lihat foto, video, atau datang langsung ke kandang di Parongpong.</span></div>
+      <div class="muncul"><span class="no">3</span><span><b>Mulai beternak</b>Domba dikirim ke lokasimu, lengkap dengan tips awal perawatan.</span></div>
+    </div>
+    <p class="paket-catatan muncul">Komposisi paket dapat disesuaikan. Harga mengikuti jenis, umur, dan bobot domba saat pemesanan. *Ongkos kirim menyesuaikan lokasi.</p>
+  </div>
+</section>
+
+<!-- PAKET KURBAN MASJID -->
+<section class="qurban" id="kurban">
+  <div class="wrap">
+    <div class="tengah muncul">
+      <span class="label">Paket kurban masjid</span>
+      <h2>Kurban untuk masjid dan musala, kami siapkan dari kandang</h2>
+      <p class="lead">Panitia cukup sebut jumlah pekurban. Kami bantu pilih domba, tandai nama pekurbannya, dan kirim ke masjid sesuai jadwal.</p>
+    </div>
+    <div class="paket-grid">
+      <article class="pk muncul">
+        <span class="nama">Paket Musala</span>
+        <div class="jumlah">5 <small>ekor</small></div>
+        <div class="komposisi"><span>Domba jantan</span></div>
+        <p class="cocok">Untuk musala atau panitia kurban lingkungan RT/RW.</p>
+        <ul><li>Domba jantan cukup umur &amp; sehat</li><li>Tidak cacat, sesuai syarat kurban</li><li>Label nama pekurban per ekor</li><li>Dikirim ke masjid menjelang hari H*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya panitia kurban dari Masjid ... (lokasi: ...). Kami tertarik Paket Musala 5 ekor domba kurban. Mohon info harga, jadwal kirim, dan ketersediaannya." target="_blank" rel="noopener">Pesan untuk masjid</a>
+      </article>
+      <article class="pk muncul unggul"><span class="pita-pk">Pilihan DKM</span>
+        <span class="nama">Paket Masjid</span>
+        <div class="jumlah">10 <small>ekor</small></div>
+        <div class="komposisi"><span>Domba jantan</span></div>
+        <p class="cocok">Untuk masjid jami dengan jumlah pekurban sedang.</p>
+        <ul><li>Domba jantan cukup umur &amp; sehat</li><li>Tidak cacat, sesuai syarat kurban</li><li>Label nama pekurban per ekor</li><li>Dikirim ke masjid menjelang hari H*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya panitia kurban dari Masjid ... (lokasi: ...). Kami tertarik Paket Masjid 10 ekor domba kurban. Mohon info harga, jadwal kirim, dan ketersediaannya." target="_blank" rel="noopener">Pesan untuk masjid</a>
+      </article>
+      <article class="pk muncul">
+        <span class="nama">Paket Masjid Raya</span>
+        <div class="jumlah">25 <small>ekor</small></div>
+        <div class="komposisi"><span>Domba jantan</span></div>
+        <p class="cocok">Untuk masjid besar, yayasan, sekolah, atau perkantoran.</p>
+        <ul><li>Domba jantan cukup umur &amp; sehat</li><li>Tidak cacat, sesuai syarat kurban</li><li>Label nama pekurban per ekor</li><li>Bisa titip rawat sampai jelang hari H*</li><li>Dikirim ke masjid menjelang hari H*</li></ul>
+        <div class="harga">Harga: tanya via WhatsApp</div>
+        <a href="#" class="btn wa link-wa" data-pesan="Halo Pesona Domba Nusantara, saya panitia kurban dari Masjid ... (lokasi: ...). Kami tertarik Paket Masjid Raya 25 ekor domba kurban. Mohon info harga, jadwal kirim, dan ketersediaannya." target="_blank" rel="noopener">Pesan untuk masjid</a>
+      </article>
+      <article class="pk muncul custom">
+        <span class="nama">Paket Kolektif</span>
+        <div class="jumlah">50+ <small>ekor</small></div>
+        <div class="komposisi"><span>Jumlah bebas</span></div>
+        <p class="cocok">Untuk kurban kolektif, lembaga zakat, perusahaan, atau instansi pemerintah.</p>
+        <ul><li>Pilihan kelas bobot domba</li><li>Pengiriman ke beberapa titik</li><li>Dokumen penawaran &amp; kuitansi resmi</li></ul>
+        <div class="harga">Harga: sesuai penawaran</div>
+        <a href="#" class="btn link-wa" data-pesan="Halo Pesona Domba Nusantara, kami ingin memesan domba kurban kolektif. Lembaga: ..., jumlah: ... ekor, lokasi pengiriman: ..., kelas bobot: .... Mohon penawarannya." target="_blank" rel="noopener">Minta penawaran</a>
+      </article>
+    </div>
+    <div class="dkm">
+      <div class="muncul"><span class="ik-q">🔍</span><b>Cek langsung ke kandang</b><span>Panitia bisa datang ke Parongpong untuk memilih domba sebelum dibayar lunas.</span></div>
+      <div class="muncul"><span class="ik-q">🏷️</span><b>Satu domba, satu nama</b><span>Setiap domba diberi label nama pekurban agar mudah dicatat panitia.</span></div>
+      <div class="muncul"><span class="ik-q">🚚</span><b>Kirim terjadwal</b><span>Tanggal kirim disepakati bersama panitia, menjelang hari raya.</span></div>
+      <div class="muncul"><span class="ik-q">🧾</span><b>Rapi untuk laporan</b><span>Kuitansi dan daftar domba per pekurban untuk laporan ke jamaah.</span></div>
+    </div>
+    <div class="syarat muncul"><span><b>✓</b> Cukup umur</span><span><b>✓</b> Sehat</span><span><b>✓</b> Tidak buta, pincang, atau kurus</span><span><b>✓</b> Telinga &amp; tanduk utuh</span></div>
+    <p class="paket-catatan muncul">Pesan lebih awal agar pilihan domba lebih banyak. Pembayaran bisa dengan uang muka. *Titip rawat, jadwal, dan ongkos kirim menyesuaikan kesepakatan dan lokasi.</p>
+  </div>
+</section>
+
+<!-- CARA ORDER -->
+<section id="order">
+  <div class="wrap">
+    <div class="tengah muncul"><span class="label">Cara order</span><h2>Empat langkah, domba sampai</h2></div>
+    <div class="langkah">
+      <div class="lk muncul"><h3>Hubungi kami</h3><p>Kirim pesan WhatsApp: jenis domba, jumlah, dan kebutuhanmu.</p></div>
+      <div class="lk muncul"><h3>Pilih domba</h3><p>Terima foto atau video stok terbaru, atau datang langsung ke kandang.</p></div>
+      <div class="lk muncul"><h3>Sepakati harga</h3><p>Harga, pembayaran, dan pengiriman disepakati dengan jelas di awal.</p></div>
+      <div class="lk muncul"><h3>Kirim atau ambil</h3><p>Domba dikirim ke alamatmu atau diambil langsung di lokasi.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. GALERI -->
+<section class="galeri" id="galeri">
+  <div class="wrap">
+    <div class="tengah muncul"><span class="label">Galeri</span><h2>Suasana kandang kami</h2><p class="lead">Begini kondisi kandang dan domba kami sehari-hari di Parongpong, Bandung Barat.</p></div>
+    <div class="gal">
+      <figure><img src="img/kandang.jpg" alt="Kandang domba Pesona Domba Nusantara" loading="lazy"><figcaption>Kandang PDN</figcaption></figure>
+      <figure><img src="img/kandang-1.jpg" alt="Domba Garut dan domba lokal di kandang kayu Pesona Domba Nusantara" loading="lazy"><figcaption>Kandang pejantan</figcaption></figure>
+      <figure><img src="img/domba-dekat.jpg" alt="Domba Garut bertanduk besar" loading="lazy"><figcaption>Domba Garut</figcaption></figure>
+      <figure><img src="img/perawat.jpg" alt="Petugas memberi pakan domba" loading="lazy"><figcaption>Perawatan harian</figcaption></figure>
+      <figure><img src="img/kandang-2.jpg" alt="Puluhan domba di dalam kandang koloni Pesona Domba Nusantara" loading="lazy"><figcaption>Stok domba</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5. KONTAK -->
+<section id="kontak">
+  <div class="wrap">
+    <div class="tengah muncul"><span class="label">Kontak &amp; lokasi</span><h2>Datang langsung ke kandang</h2><p class="lead">Lihat dan pilih domba secara langsung. Kabari kami lewat WhatsApp sebelum berkunjung.</p></div>
+    <div class="kontak-grid">
+      <div class="info muncul">
+        <div class="info-item"><span class="ik"><svg><use href="#pin"/></svg></span><div><b>Alamat</b><address>Kp. Kebon Hui RT 02 / RW 17, Desa Cigugur Girang, Kec. Parongpong, Kab. Bandung Barat, Jawa Barat 40559</address></div></div>
+        <div class="info-item"><span class="ik"><svg><use href="#wa"/></svg></span><div><b>WhatsApp</b><a href="#" class="link-wa" target="_blank" rel="noopener">+62 858-6497-2573</a></div></div>
+        <div class="info-item"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Kunjungan</b><span>Buat janji dulu lewat WhatsApp</span></div></div>
+        <div class="info-item"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><div><b>Media sosial</b>
+          <div class="sosmed">
+            <a href="https://www.instagram.com/cv.pesonadomba__nusantara" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>@cv.pesonadomba__nusantara</a>
+            <a href="https://www.tiktok.com/@pesonadombanusantara" target="_blank" rel="noopener"><svg><use href="#tt"/></svg>@pesonadombanusantara</a>
+            <a href="https://www.facebook.com/search/top?q=Pesona%20Domba%20Nusantara%20Farm" target="_blank" rel="noopener"><svg><use href="#fb"/></svg>Pesona Domba Nusantara Farm</a>
+            <a href="https://www.youtube.com/results?search_query=Pesona+Domba+Nusantara" target="_blank" rel="noopener"><svg><use href="#yt"/></svg>Pesona Domba Nusantara</a>
+          </div></div></div>
+        <div class="aksi">
+          <a href="#" class="btn wa link-wa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chat WhatsApp</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Kp.+Kebon+Hui%2C+Cigugur+Girang%2C+Parongpong%2C+Bandung+Barat+40559" class="btn" target="_blank" rel="noopener"><svg><use href="#pin"/></svg>Petunjuk arah</a>
+        </div>
+      </div>
+      <div class="peta muncul">
+        <a class="peta-cadangan" href="https://www.google.com/maps/search/?api=1&amp;query=Kp.+Kebon+Hui%2C+Cigugur+Girang%2C+Parongpong%2C+Bandung+Barat+40559" target="_blank" rel="noopener">
+          <span class="pin-besar"><svg><use href="#pin"/></svg></span>
+          <b>Lokasi kandang Pesona Domba Nusantara</b>
+          <span>Kp. Kebon Hui, Desa Cigugur Girang, Kec. Parongpong, Kab. Bandung Barat</span>
+          <span class="btn">Buka di Google Maps</span>
+        </a>
+        <iframe title="Peta lokasi Pesona Domba Nusantara di Cigugur Girang, Parongpong, Bandung Barat" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Kp.+Kebon+Hui,+Cigugur+Girang,+Parongpong,+Kabupaten+Bandung+Barat,+Jawa+Barat+40559&amp;z=15&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="kaki">
+      <div>
+        <span class="badge"><img src="img/logo.png" alt="Logo Pesona Domba Nusantara"></span>
+        <p>CV Pesona Domba Nusantara. Pusat domba Bandung Barat: Domba Garut, Priangan, pedaging, dan bakalan.</p>
+      </div>
+      <div><h4>Jelajahi</h4><ul><li><a href="#tentang">Tentang</a></li><li><a href="#jenis">Jenis domba</a></li><li><a href="#layanan">Layanan</a></li><li><a href="#paket">Paket peternak pemula</a></li><li><a href="#kurban">Paket kurban masjid</a></li><li><a href="#order">Cara order</a></li><li><a href="#kontak">Kontak</a></li></ul></div>
+      <div><h4>Hubungi</h4><ul><li><a href="#" class="link-wa" target="_blank" rel="noopener">WhatsApp +62 858-6497-2573</a></li><li>Parongpong, Kab. Bandung Barat</li></ul></div>
+    </div>
+    <div class="bawah">
+      <span>© <span id="tahun"></span> CV Pesona Domba Nusantara · Domba Pilihan, Harga Bersahabat.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float link-wa" target="_blank" rel="noopener" aria-label="Chat WhatsApp Pesona Domba Nusantara"><svg style="color:#fff"><use href="#wa"/></svg></a>
+
+<script>
+  document.getElementById('tahun').textContent = new Date().getFullYear();
+  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () =>
+    document.getElementById('menu').classList.remove('buka')));
+
+  // Tautan WhatsApp (nomor dari brief)
+  const NOMOR_WA = '6285864972573';
+  document.querySelectorAll('.link-wa').forEach(a => {
+    const jenis = a.dataset.jenis;
+    const pesan = a.dataset.pesan ? a.dataset.pesan
+      : jenis ? 'Halo Pesona Domba Nusantara, saya mau tanya soal ' + jenis + '.'
+      : 'Halo Pesona Domba Nusantara, saya lihat website dan mau tanya stok domba.';
+    a.href = 'https://wa.me/' + NOMOR_WA + '?text=' + encodeURIComponent(pesan);
+  });
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('tampil'); io.unobserve(e.target); }
+  }), {threshold:.1});
+  document.querySelectorAll('.muncul').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
