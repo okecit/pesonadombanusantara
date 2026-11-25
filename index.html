@@ -82,7 +82,30 @@
 
   /* BANNER UTAMA */
   .banner{position:relative;min-height:640px;display:flex;align-items:center;padding:90px 0;color:#fff;overflow:hidden}
-  .banner > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+  .slides{position:absolute;inset:0;z-index:0}
+  .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+  .slide.aktif{opacity:1}
+  .slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 7s ease-out}
+  .slide.aktif img{transform:scale(1.1)}
+  .sorot{position:absolute;z-index:3;right:max(24px,calc((100vw - 1180px)/2 + 24px));bottom:40px;width:330px;background:rgba(255,252,246,.95);color:var(--teks);border-radius:20px;padding:18px 20px 16px;box-shadow:0 20px 50px rgba(0,0,0,.3);backdrop-filter:blur(6px)}
+  .sorot .label-s{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--kayu)}
+  .sorot .judul-s{font-family:"Merriweather";font-weight:900;font-size:20px;color:var(--cokelat);line-height:1.25;margin:4px 0 4px}
+  .sorot .teks-s{font-size:14px;color:var(--abu);line-height:1.5;min-height:42px}
+  .sorot .bawah-s{display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:10px}
+  .sorot .link-s{font-weight:800;font-size:14.5px;color:var(--cokelat);text-decoration:none;border-bottom:2px solid var(--emas)}
+  .sorot .nav-s{display:flex;gap:6px}
+  .sorot .nav-s button{width:34px;height:34px;border-radius:50%;border:0;background:var(--cokelat);color:var(--emas);font-size:18px;font-weight:800;cursor:pointer;display:grid;place-items:center}
+  .sorot .nav-s button:hover{background:var(--kayu)}
+  .titik{display:flex;gap:6px;margin-top:12px}
+  .titik button{flex:1;height:5px;border:0;border-radius:3px;background:rgba(90,42,12,.18);padding:0;cursor:pointer;position:relative;overflow:hidden}
+  .titik button i{position:absolute;inset:0;background:var(--emas);transform:scaleX(0);transform-origin:left}
+  .titik button.aktif i{animation:isi var(--durasi,6s) linear forwards}
+  .titik button.selesai i{transform:scaleX(1)}
+  .banner.jeda .titik button.aktif i{animation-play-state:paused}
+  @keyframes isi{to{transform:scaleX(1)}}
+  .sorot .isi-s{transition:opacity .4s}
+  .sorot.ganti .isi-s{opacity:0}
+  @media (prefers-reduced-motion:reduce){.slide,.slide img{transition:none}.slide.aktif img{transform:scale(1.02)}}
   .banner::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(46,20,4,.92) 0%,rgba(46,20,4,.75) 42%,rgba(46,20,4,.15) 80%)}
   .banner .wrap{position:relative;z-index:2;width:100%}
   .banner-isi{max-width:600px}
@@ -154,6 +177,58 @@
   .lay p{color:#E7CDB0;font-size:15.5px}
   .lay small{display:block;margin-top:10px;font-size:13px;color:#C9A98A}
 
+
+
+  /* HERO SLIDER BANNER */
+  section.hero{background:var(--cokelat);color:#fff;padding:0}
+  .hs{position:relative;width:min(100%,calc((100vh - 170px) * 16 / 9));min-width:min(100%,900px);margin:0 auto;aspect-ratio:16/9;overflow:hidden;background:#2E1404}
+  .hs-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s}
+  .hs-slide.aktif{opacity:1;visibility:visible}
+  .hs-slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .hs-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:0;background:rgba(46,20,4,.55);color:#fff;font-size:28px;line-height:1;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(4px);transition:background .2s}
+  .hs-nav:hover{background:var(--emas);color:var(--cokelat)}
+  .hs-prev{left:16px}.hs-next{right:16px}
+  .hs-titik{position:absolute;z-index:3;left:50%;transform:translateX(-50%);bottom:14px;display:flex;gap:8px;width:min(240px,50%)}
+  .hs-titik button{flex:1;height:5px;border:0;border-radius:3px;background:rgba(255,255,255,.35);padding:0;cursor:pointer;position:relative;overflow:hidden}
+  .hs-titik button i{position:absolute;inset:0;background:var(--emas);transform:scaleX(0);transform-origin:left}
+  .hs-titik button.aktif i{animation:isi var(--durasi,6s) linear forwards}
+  .hs-titik button.selesai i{transform:scaleX(1)}
+  .hero.jeda .hs-titik button.aktif i{animation-play-state:paused}
+  @keyframes isi{to{transform:scaleX(1)}}
+  .hero-bar{background:linear-gradient(180deg,#4A2209,var(--cokelat));padding:26px 0;border-top:3px solid var(--emas)}
+  .hero-bar-isi{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+  .hero-bar h1{color:#fff;font-size:clamp(26px,3vw,36px);line-height:1.15}
+  .hero-bar h1 .h1-atas{display:block;font-family:"Nunito",sans-serif;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emas);margin-bottom:6px}
+  .hb-tag{color:#E7CDB0;font-size:15.5px;margin-top:6px;max-width:640px}
+  .hero-bar .aksi{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-bar .btn.garis{border-color:rgba(255,255,255,.7);color:#fff}
+  @media (max-width:700px){.hs{min-width:0;width:100%}.hs-nav{display:none}.hs-prev{left:8px}.hs-next{right:8px}.hs-titik{bottom:8px}.hero-bar .aksi{width:100%}.hero-bar .aksi .btn{flex:1 1 100%;justify-content:center}}
+  @media (prefers-reduced-motion:reduce){.hs-slide{transition:none}}
+
+
+  /* Slide 1: layanan (HTML, senada banner) */
+  .hs{container-type:inline-size}
+  .hs-layanan{background:#2E1404;color:#fff;overflow:hidden}
+  .hs-layanan .hl-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+  .hs-layanan::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(46,20,4,.97) 0%,rgba(60,26,6,.92) 40%,rgba(60,26,6,.45) 58%,rgba(0,0,0,0) 78%)}
+  .hl-isi{position:absolute;z-index:2;left:6.5cqw;top:5cqw;width:46cqw}
+  .hs-slide .hl-logo{width:13cqw;height:auto;object-fit:contain;display:block;margin-bottom:1.6cqw;filter:drop-shadow(0 .4cqw .8cqw rgba(0,0,0,.4))}
+  .hl-judul{font-family:"Merriweather",serif;font-weight:900;font-size:6.6cqw;line-height:1;color:#FFF8EC;text-shadow:0 .3cqw 1cqw rgba(0,0,0,.45)}
+  .hl-skrip{font-size:6.2cqw;line-height:1.1;margin-top:.2cqw;background:linear-gradient(180deg,#FFE6A3 0%,#F2B23A 55%,#C98A1E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .3cqw .5cqw rgba(0,0,0,.45))}
+  .hl-garis{width:24cqw;height:.45cqw;margin:.8cqw 0 1.4cqw 2cqw;border-radius:50%;background:linear-gradient(90deg,transparent,#F2B23A 20%,#FFE6A3 60%,transparent)}
+  .hl-tag{font-family:"Merriweather",serif;font-style:italic;font-weight:700;font-size:2cqw;color:#F8E2B2}
+  .hl-pil{list-style:none;display:grid;grid-template-columns:repeat(2,max-content);gap:.9cqw 1cqw}
+  .hl-pil li{font-size:1.25cqw;font-weight:800;color:#fff;padding:.7cqw 1.4cqw .7cqw 3cqw;border-radius:99cqw;background:rgba(46,20,4,.75);border:.12cqw solid #F2B23A;position:relative}
+  .hl-pil li::before{content:"✓";position:absolute;left:.7cqw;top:50%;transform:translateY(-50%);width:1.6cqw;height:1.6cqw;border-radius:50%;background:#F2B23A;color:#5A2A0C;font-size:1cqw;display:grid;place-items:center}
+  .hl-strip{position:absolute;z-index:2;left:0;right:0;bottom:0;height:14cqw;display:flex;align-items:center;gap:2.2cqw;padding:3.2cqw 4cqw 0 5cqw;background:linear-gradient(180deg,#5A2A0C,#3E1C07);clip-path:polygon(0 30%,20% 18%,45% 26%,70% 12%,100% 0,100% 100%,0 100%)}
+  .hl-strip::before{content:"";position:absolute;left:0;right:0;top:0;height:100%;background:linear-gradient(90deg,#C98A1E,#FFE6A3,#F2B23A);clip-path:polygon(0 30%,20% 18%,45% 26%,70% 12%,100% 0,100% 1.2%,70% 13.4%,45% 27.4%,20% 19.4%,0 31.4%);pointer-events:none}
+  .hl-ik{display:flex;align-items:center;gap:.9cqw;padding-right:2.2cqw;border-right:.08cqw solid rgba(248,226,178,.35)}
+  .hl-ik span{width:3.6cqw;height:3.6cqw;border-radius:.8cqw;border:.12cqw solid #F2B23A;color:#F2B23A;display:grid;place-items:center;flex:none;background:rgba(0,0,0,.2)}
+  .hl-ik svg{width:2.2cqw;height:2.2cqw}
+  .hl-ik b{font-size:1.15cqw;font-weight:700;line-height:1.3;color:#F8E2B2}
+  .hl-ik:nth-of-type(4){border-right:0}
+  .hl-cta{margin-left:auto;flex:none;font-weight:800;font-size:1.35cqw;color:#3E1C07;text-decoration:none;padding:1.1cqw 2.2cqw;border-radius:99cqw;background:linear-gradient(180deg,#FFE6A3,#F2B23A 60%,#C98A1E);box-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.35)}
+  .hl-cta:hover{filter:brightness(1.05)}
 
   /* PAKET PETERNAK PEMULA */
   .paket{background:var(--krem-2)}
@@ -302,7 +377,8 @@
     section{padding:72px 0}
     .logo b{font-size:15px}
     .logo img{height:50px}
-    .banner{min-height:0;padding:70px 0}
+    .banner{min-height:0;padding:70px 0 0;flex-direction:column;align-items:stretch}
+    .sorot{position:relative;right:auto;bottom:auto;width:auto;margin:34px 16px 22px}
     .banner .aksi .btn{width:100%;justify-content:center}
     .makna{grid-template-columns:1fr}
     .dkm{grid-template-columns:1fr}
@@ -345,21 +421,39 @@
   </nav>
 </header>
 
-<!-- 1. BANNER UTAMA -->
-<section class="banner" id="beranda">
-  <img src="img/kandang.jpg" alt="Kandang kayu Pesona Domba Nusantara berisi domba Garut bertanduk besar">
-  <div class="wrap">
-    <div class="banner-isi muncul">
-      <span class="pil">CV Pesona Domba Nusantara</span>
-      <h1><span class="h1-atas">Jual Domba Garut &amp; Priangan</span>Pusat Domba</h1>
-      <span class="lokasi kuas"><svg><use href="#pin"/></svg>Bandung Barat</span>
-      <p class="tagline">“Domba Pilihan, Harga Bersahabat.”</p>
-      <ul class="cek">
-        <li><span>✓</span>Grosir domba dengan harga bersahabat</li>
-        <li><span>✓</span>Pengadaan partai besar untuk instansi &amp; program pemerintah</li>
-        <li><span>✓</span>Aqiqah, kurban, pembibitan &amp; suplai daging rutin</li>
-        <li><span>✓</span>Pengiriman Bandung Raya, Jabodetabek &amp; luar Jawa*</li>
-      </ul>
+<!-- 1. HERO SLIDER -->
+<section class="hero" id="beranda" aria-roledescription="carousel" aria-label="Banner Pesona Domba Nusantara">
+  <div class="hs">
+    <div class="hs-slide hs-layanan aktif">
+      <img class="hl-bg" src="img/kandang.jpg" alt="" fetchpriority="high">
+      <div class="hl-isi">
+        <img class="hl-logo" src="img/logo.png" alt="Pesona Domba Nusantara">
+        <div class="hl-judul">Pusat Domba</div>
+        <div class="hl-skrip kuas">Bandung Barat</div>
+        <div class="hl-garis"></div>
+        <p class="hl-tag">Domba Pilihan, Harga Bersahabat.</p>
+      </div>
+      <div class="hl-strip">
+        <div class="hl-ik"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21v-6h6v6M3 10l9-6 9 6"/></svg></span><b>Pengadaan<br>Partai Besar</b></div>
+        <div class="hl-ik"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></span><b>Aqiqah &amp;<br>Kurban</b></div>
+        <div class="hl-ik"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-3-8-6-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5-4 8-8 11z"/></svg></span><b>Pembibitan &amp;<br>Paket Pemula</b></div>
+        <div class="hl-ik"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h13v10H1zM14 10h4l4 4v3h-8z"/><circle cx="5" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><b>Kirim Bandung,<br>Jabodetabek &amp; Luar Jawa</b></div>
+        <a href="#" class="hl-cta link-wa" target="_blank" rel="noopener" tabindex="0">Tanya Stok Sekarang →</a>
+      </div>
+    </div>
+    <a class="hs-slide" href="#jenis"><img src="img/hero-garut.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Domba Garut Pilihan dari Pesona Domba Nusantara: domba berkualitas, berkarakter, siap untuk kurban maupun ternak"></a>
+    <a class="hs-slide link-wa" href="#" data-pesan="Halo Pesona Domba Nusantara, saya tertarik menjadi mitra grosir domba. Mohon info kerja samanya." target="_blank" rel="noopener"><img src="img/hero-grosir.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Mitra grosir domba terpercaya: Pesona Domba Nusantara menerima partai kecil dan partai besar, dengan truk pengiriman"></a>
+    <a class="hs-slide" href="#tentang"><img src="img/hero-tradisi.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Pesona Tradisi, Kebanggaan Nusantara: Domba Garut, warisan budaya bernilai ekonomi"></a>
+    <button type="button" class="hs-nav hs-prev" aria-label="Banner sebelumnya">‹</button>
+    <button type="button" class="hs-nav hs-next" aria-label="Banner berikutnya">›</button>
+    <div class="hs-titik"><button type="button" aria-label="Banner 1" class="aktif"><i></i></button><button type="button" aria-label="Banner 2"><i></i></button><button type="button" aria-label="Banner 3"><i></i></button><button type="button" aria-label="Banner 4"><i></i></button></div>
+  </div>
+  <div class="hero-bar">
+    <div class="wrap hero-bar-isi">
+      <div>
+        <h1><span class="h1-atas">Jual Domba Garut &amp; Priangan</span>Pusat Domba Bandung Barat</h1>
+        <p class="hb-tag">“Domba Pilihan, Harga Bersahabat.” Grosir &amp; eceran, kurban, aqiqah, pembibitan, hingga pengadaan partai besar.</p>
+      </div>
       <div class="aksi">
         <a href="#" class="btn wa link-wa" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Tanya stok via WhatsApp</a>
         <a href="#jenis" class="btn garis">Lihat jenis domba</a>
@@ -656,6 +750,32 @@
       : 'Halo Pesona Domba Nusantara, saya lihat website dan mau tanya stok domba.';
     a.href = 'https://wa.me/' + NOMOR_WA + '?text=' + encodeURIComponent(pesan);
   });
+
+
+  // Slider banner hero
+  (function(){
+    const hero=document.querySelector('.hero'); if(!hero) return;
+    const sl=[...hero.querySelectorAll('.hs-slide')], dots=[...hero.querySelectorAll('.hs-titik button')];
+    const DUR=6000; let i=0,t=null,jeda=false;
+    hero.style.setProperty('--durasi',DUR/1000+'s');
+    function tampil(n){
+      i=(n+sl.length)%sl.length;
+      sl.forEach((s,k)=>{s.classList.toggle('aktif',k===i);s.setAttribute('aria-hidden',k===i?'false':'true');s.tabIndex=k===i?0:-1;});
+      dots.forEach((d,k)=>{d.classList.remove('aktif','selesai');if(k<i)d.classList.add('selesai');});
+      void dots[i].offsetWidth; dots[i].classList.add('aktif'); jalan();
+    }
+    function jalan(){clearTimeout(t); if(!jeda) t=setTimeout(()=>tampil(i+1),DUR);}
+    function set(j){jeda=j;hero.classList.toggle('jeda',j);if(j)clearTimeout(t);else jalan();}
+    hero.querySelector('.hs-next').onclick=()=>tampil(i+1);
+    hero.querySelector('.hs-prev').onclick=()=>tampil(i-1);
+    dots.forEach((d,k)=>d.onclick=()=>tampil(k));
+    const hs=hero.querySelector('.hs');
+    hs.addEventListener('mouseenter',()=>set(true)); hs.addEventListener('mouseleave',()=>set(false));
+    document.addEventListener('visibilitychange',()=>set(document.hidden));
+    let x0=null; hs.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+    hs.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){e.preventDefault();tampil(i+(dx<0?1:-1));}x0=null;});
+    tampil(0);
+  })();
 
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting){ e.target.classList.add('tampil'); io.unobserve(e.target); }
