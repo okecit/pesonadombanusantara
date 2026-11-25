@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pesonadombanusantara.vercel.app/sitemap.xml
